@@ -7,12 +7,12 @@ public final class Apple extends JavaPlugin {
     @Override
     public void onEnable() {
         // 기본 설정 생성
-        getConfig().addDefault("cooldown-seconds", 5);
+        getConfig().addDefault("cooldown-seconds", 15);
         getConfig().addDefault("message-on-cooldown", "아직 먹을 수 없습니다.");
         getConfig().options().copyDefaults(true);
         saveConfig();
 
-        int cooldownSeconds = getConfig().getInt("cooldown-seconds", 5);
+        int cooldownSeconds = getConfig().getInt("cooldown-seconds", 15);
         String msg = getConfig().getString("message-on-cooldown", "아직 먹을 수 없습니다.");
 
         // 리스너 등록
